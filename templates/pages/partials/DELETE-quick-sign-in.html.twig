@@ -1,0 +1,77 @@
+{% block login_content %}
+    <div class="login-box" style="margin:auto;">
+        {% block loginLogo %}
+        <div class="rs-login-box panel panel-default" style='margin: 1% auto !important;'>
+            <div class="panel-heading text-center">
+                    <h4>{{site.title}} Login</h4>
+            </div>
+        <!-- /.login-logo -->
+        {% endblock %}
+
+    {% block loginBox %}
+        <div class="panel-body">
+        <div class="login-box-body login-form">
+            <p class="login-box-msg"><strong>{{translate('SIGNIN')}}</strong></p>
+
+            <div class="form-alerts" id="alerts-page"></div>
+
+            {% block loginForm %}
+            <form action="{{site.uri.public}}/account/login" id="sign-in" method="post">
+            {% include "forms/csrf.html.twig" %}
+            {#
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="SiteName" name="site_name">
+                <i class="glyphicon glyphicon-home form-control-icon" aria-hidden="true"></i>
+            </div>
+            #}
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="{% if site.login.enable_email %}{{translate('EMAIL_OR_USERNAME')}}{% else %}{{translate('USERNAME')}}{% endif %}" name="user_name">
+                <i class="glyphicon glyphicon-user form-control-icon" aria-hidden="true"></i>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="{{translate('PASSWORD')}}" name="password">
+                <i class="glyphicon glyphicon-lock form-control-icon" aria-hidden="true"></i>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label>
+                    <input type="checkbox" class="js-icheck" name="rememberme"> {{translate('REMEMBER_ME')}}
+                    </label>
+                </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">{{translate('LOGIN')}}</button>
+                </div>
+                <!-- /.col -->
+            </div>
+            </form>
+            {% endblock %}
+
+            {% block loginLinks %}
+                <a href="{{site.uri.public}}/account/forgot-password">{{translate('PASSWORD.CHANGE')}} / <br>{{translate('PASSWORD.FORGET')}}</a><br>
+                {% if site.registration.require_email_verification and site.quick_login_register == 'Y'%}
+                    <a href="{{site.uri.public}}/account/resend-verification">{{translate('ACCOUNT.VERIFICATION.RESEND')}}</a><br>
+                {% endif %}
+                {% if (site.registration.enabled and site.quick_login_register == 'Y') %}
+                    <a href="{{site.uri.public}}/account/register">{{translate('REGISTER')}}</a>
+                {% endif %}
+            {% endblock %}
+
+        </div>
+        </div>
+        <div class="panel-footer">
+                <div class='text-center'>
+                <a href="{{site.uri.public}}" class='text-center'>
+                    <strong>{{translate('REGSEVAK.PAGE_HEADER')}} {{site.title}}</strong>
+                </a>
+            </div>
+        </div>    
+    </div>    
+    {% endblock %}
+
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+{% endblock %}

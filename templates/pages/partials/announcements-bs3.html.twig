@@ -1,0 +1,79 @@
+{% if (announcements | length > 0)%}
+
+    <!-- Carousel ================================================== -->
+    <div class="text-center dt-pulldown-header">
+        <span style="padding:3px 20px" class="label label-info">Announcements</span>
+    </div>
+    <div class='card'>
+        <div id="myCarousel" class="carousel cm-carousel slide header header-raised header-primary text-center">
+        <!-- Indicators -->
+            {% set tabactive = 'active'%}
+            {% set ctlscroll = (announcements | length > 1) ? 'scroll' : 'noscroll' %}
+
+            <div class="carousel-inner">
+                {% set tabactive = 'active'%}
+                {% set tabarray = [] %}
+                {% for aid, announcement in announcements %}
+                    {% set idprefix = randomStr(5) %}
+                    {% set tabid = 'cmcaritem_' ~ aid ~ '_' ~ idprefix %}
+                    {#}
+                    {% set tabarray = {
+                        "first": 1
+                    } %}
+                    {% set myArray = myArray|merge({
+                        "second": 2
+                    }) %} #}
+
+                    {% set tabarray = tabarray|merge([tabid]) %}
+
+                    <div class="item {{tabactive}}" id='{{tabid}}'><div class="ann-container container {{ctlscroll}}">
+                        {#<div class="carousel-caption1">#}
+                        {% set crslid = 'cm-carousel'~ random(1000) %}
+                            <div class='carousel-ann-head' id='{{crslid}}'>
+                                <h4>{{announcement.title}}
+                                <a class="pull-right" 
+                                    onclick="showHideDetails('#{{crslid}}', 'carousel-ann-body','collapse-down','minus-sign'); return false;">
+                                    <span class="rs-showhide-icon glyphicon glyphicon-minus-sign" aria-hidden="true"></span></a>
+
+                                    {#<a class="pull-right" 
+                                    onclick="jQuery('.carousel-ann-body').toggle(); return false;">
+                                    <span class="label label-default"
+                                        style='text-decoration:underline;'>show / hide details</span></a> #}
+                                </h4>
+                            </div>
+                            <div class='carousel-ann-body'>
+                                {{announcement.body|raw}}
+                            </div>
+                        {#</div>#}
+                    </div></div>
+                    {% set tabactive = ''%}
+                {% endfor %}
+            </div>
+            {% if announcements | length > 1 %}
+                <a class="left ann-carcontrol {{ctlscroll}} carousel-control"  style='margin-top:auto;'
+                    href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-menu-left"></span>
+                </a>
+                <a class="right ann-carcontrol {{ctlscroll}} carousel-control" style='margin-top:auto;'
+                    href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-menu-right"></span>
+                </a>
+            {% endif %}
+            {% if announcements | length > 1 %}
+                <ol class="carousel-indicators" style='position:relative;left:auto;margin-left:auto;width:100%;bottom:auto;'>
+                    {% set tabactive = 'active'%}
+                    {% for aid, announcement in announcements %}
+                        <li data-target="#announcement_carousel" data-slide-to="{{aid}}" class="{{tabactive}}" style='background-color:lightblue;'></li>
+                        {% set tabactive = ''%}
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </div>
+        {#}
+        {% for tid, tabitem in tabarray %}
+
+        {% endfor %}
+        #}
+
+    </div>
+{% endif %}

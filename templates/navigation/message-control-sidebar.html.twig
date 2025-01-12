@@ -1,0 +1,133 @@
+    <!-- Create the tabs -->
+{% set isadmin = checkAccess('uri_users') or checkAccess('rs_regadmin_activities') %}
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs crdt-tabpane-ul">
+        {% set tabactive = 'active'%}
+        {% if isadmin %}
+            <li class="active">
+                <a href="#control-sidebar-upload-tab" data-toggle="tab">
+                <span class="glyphicon glyphicon-upload"></span></a>
+            </li>
+            {% set tabactive = ''%}
+        {% endif %}
+
+        
+        {% if params.other_dts.counts_dt is iterable %}
+            <li class="crdt-tabpane-li {{tabactive}}"><a href="#control-sidebar-counts-tab" data-toggle="tab">
+                <i class="far fa-chart-bar"></i></a>
+            </li>
+            {% set tabactive = ''%}
+        {% endif %}
+        {% if params.other_dts.reports_dt is iterable %}
+            <li class="crdt-tabpane-li {{tabactive}}"><a href="#control-sidebar-reports-tab" data-toggle="tab">
+                <i class="far fa-chart-pie file-export"></i></a>
+            </li>
+            {% set tabactive = ''%}
+        {% endif %}
+        <li class='crdt-tabpane-li {{tabactive}}'><a href="#control-sidebar-message-tab" data-toggle="tab">
+            <i class="fas fa-envelope"></i></a>
+        </li>
+        {% set tabactive = ''%}
+        <li class='crdt-tabpane-li {{tabactive}}'><a href="#control-sidebar-color-tab" data-toggle="tab">
+            <i class="fas fa-at"></i></a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content ">
+      <!-- Home tab content -->
+    {% set tabactive = 'active'%}
+
+    {% if isadmin %}
+        <div class="tab-pane {{tabactive}}" id="control-sidebar-upload-tab">
+            <div id="widget-uploadfile" class="box box-primary">
+                    {#{% include "pages/partials/cmdfw/cmdfw-neon-upload.html.twig" %}#}
+            </div>
+        </div>
+        {% set tabactive = ''%}
+    {% endif %}
+
+    {% if params.other_dts.counts_dt is iterable %}
+      <div class="tab-pane {{tabactive}} crdt-tabpane" id="control-sidebar-counts-tab">
+          {% set crud_params = {} %}
+          {% include 'partials/datatable-crud.html.twig' with {
+              'cruddt' : params.other_dts.counts_dt,
+              'crud_params':crud_params
+              }
+          %}
+      </div>
+        {% set tabactive = ''%}
+    {% endif %}
+    {% if params.other_dts.reports_dt is iterable %}
+      <div class="tab-pane {{tabactive}}" id="control-sidebar-reports-tab">
+          {% set crud_params = {} %}
+          {% include 'partials/datatable-crud.html.twig' with {
+              'cruddt' : params.other_dts.reports_dt,
+              'crud_params':crud_params
+              }
+          %}
+      </div>
+        {% set tabactive = ''%}
+    {% endif %}
+
+      <div class="tab-pane {{tabactive}}" id="control-sidebar-message-tab">
+          {% set crud_params = {} %}
+          {% include 'partials/datatable-crud.html.twig' with {
+              'cruddt' : uf_messages.ufmdt,
+              'crud_params':crud_params
+              }
+          %}
+{#}
+        <h3 class="control-sidebar-heading">Messages</h3>
+            {% include 'pages/partials/message-table.html.twig'%}
+#}            
+      </div>
+      <div class="tab-pane" id="control-sidebar-color-tab">
+            <h3 class="control-sidebar-heading">Color Pallet</h3>
+            <table class='table'>
+                <tr>
+                    <td class='rs-pallett rs-gold'>rs-gold #c0b283;</td>
+                    <td class='rs-pallett rs-clean'>rs-clean #dfdce3;</td>
+                    <td class='rs-pallett rs-silk'>rs-silk #dcd0c0</td>
+                    <td class='rs-pallett rs-powder'>rs-powder #6689bf</td>
+                </tr>
+                <tr>
+                    <td class='rs-pallett rs-stark'>rs-stark #e7dfdd</td>
+                    <td class='rs-pallett rs-lavendar'>rs-lavendar #6d7993;</td>
+                    <td class='rs-pallett rs-dusty'>rs-dusty #96858f;</td>
+                    <td class='rs-pallett rs-paper'>rs-paper #d5d5d5;</td>
+                </tr>
+                <tr>
+                    <td class='rs-pallett rs-sky'>rs-sky #caebf2;</td>
+                    <td class='rs-pallett rs-carbon'>rs-carbon #a9a9a9;</td>
+                    <td class='rs-pallett rs-neutral'>rs-neutral #efefef;</td>
+                    <td class='rs-pallett rs-sand'>rs-sand #f4decb;</td>
+                </tr>
+                <tr>
+                    <td class='rs-pallett rs-alumnimum'>rs-alumnimum #d9d9d9;</td>
+                    <td class='rs-pallett rs-neutral2'>rs-neutral2 #c5c1c0;</td>
+                    <td class='rs-pallett rs-basmati'>rs-basmati #dbd9d2;</td>
+                    <td class='rs-pallett rs-parsnip'>rs-parsnip #efeeea;</td>
+                </tr>
+                <tr>
+                    <td class='rs-pallett rs-jasmine'>rs-jasmine #f6f6f4;</td>
+                    <td class='rs-pallett rs-peppercorn'>rs-peppercorn #214c15;</td>
+                    <td class='rs-pallett rs-portobello'>rs-portobello #b7a9a1;</td>
+                    <td class='rs-pallett rs-gray1'>rs-gray1 #898989;</td>
+                </tr>
+                <tr>
+                    <td class='rs-pallett rs-gray2'>rs-gray2 #dae4e7;</td>
+                    <td class='rs-pallett rs-gray2'>#dae4e7;</td>
+                    <td class='rs-pallett rs-gray2'>#dae4e7;</td>
+                    <td class='rs-pallett rs-gray2'>#dae4e7;</td>
+                </tr>
+            </table>
+
+
+
+      </div>
+    <style>
+        .rs-pallett {
+            padding: 10px;
+        }
+    </style>
+      <!-- /.tab-content -->
+    </div>

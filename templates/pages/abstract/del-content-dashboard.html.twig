@@ -1,0 +1,135 @@
+{% extends "pages/abstract/base.html.twig" %}
+{% block stylesheets_page_group %}
+    <!-- Content Dashboard Page-group-specific CSS asset bundle -->
+    {{ assets.css('css/admin') | raw }}
+    {{ assets.css('css/content/styles')| raw }}
+{% endblock %}
+
+
+{% block page_description %}
+    Share Documents Responsibly 
+{% endblock %}
+
+{% block body_attributes %}
+    {% set skincolor = 'none'%}
+    {% if current_user.isMaster() %}
+        {% set skincolor = site.UFSkin.sadmin %}
+    {% elseif current_user.isRegAdmin() %}
+        {% set skincolor = site.UFSkin.admin %}
+    {% elseif current_user.isFrontDesk() %}
+        {% set skincolor = site.UFSkin.frontdesk %}
+    {% elseif current_user.isTeacher() %}
+        {% set skincolor = site.UFSkin.teacher %}
+    {% endif %}
+
+    {% if skincolor != 'none' %}
+        class="hold-transition skin-{{skincolor}} cmcamps-skin rs-sidebar-mini sidebar-collapse"
+    {% else %}
+        class="hold-transition skin-{{site.AdminLTE.skin}} rs-sidebar-mini sidebar-collapse"
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {# This needs to be here (early in the body) to make sure the animation doesn't fire #}
+    <script>
+        (function () {
+            var body = document.getElementsByTagName('body')[0];
+            body.className = body.className +' rs-body-topnav-fixed';
+
+          if (Boolean(sessionStorage.getItem('sidebar-toggle-collapsed'))) {
+            var body = document.getElementsByTagName('body')[0];
+            body.className = body.className + ' sidebar-collapse';
+          }
+          if (Boolean(sessionStorage.getItem('ufmail-toggle-collapsed'))) {
+            var body = document.getElementsByTagName('body')[0];
+            body.className = body.className + ' ufmail-collapse';
+          }
+        })();
+    </script>
+{# style='background:url({{assets.url('assets://regsevak/images/gurudev-standing02.jpg')}} no-repeat -8% 0%;'#}
+    <div class="wrapper rs-wrapper rs-fixed-nav rs-{{regsevak.cm_mission}} rs-{{regsevak.server_name}}">
+    {% if params is not iterable %}
+        {% set params = {} %}
+    {% endif %}
+    {% set params = params|merge({navbar_class : 'navbar-fixed-top'}) %}
+      <header class="main-header">
+        <!-- Header Navbar: style can be found in header.less -->
+    {% if (params.custom_admin|default('N') == 'N') %}
+        {% include "navigation/navbar.html.twig" %}
+    {% else %}
+        {% include "navigation/rs-navbar.html.twig" %}
+    {% endif %}
+    </header>
+    {% if (params.custom_admin|default('N') == 'N') %}
+        {% if checkAccess('uri_users') %}
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar rs-main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                {% include 'navigation/sidebar.html.twig' %}
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        {% endif %}
+     {% endif %}
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper rs-content-wrapper rs-fixed-nav {{(params.custom_admin|default('N') == 'N') ? 'admin-content-wrapper' : '' }}">
+        <!-- Content Header (Page header) -->
+        {% block content_header %}
+        <section class="rs-content content-header">
+          <h1>{% block header_title %}{{ block('page_title') }}{% endblock %}</h1>
+          {% if block('page_description') is not empty %}<h1><small>{% block header_description %}{{ block('page_description') }}{% endblock %}</small></h1>{% endif %}
+          {#
+          {% block breadcrumb %}
+            {% include 'navigation/breadcrumb.html.twig' with {page_title: block('page_title')} %}
+          {% endblock %}
+          #}
+        </section>
+        {% endblock %}
+        <section class="rs-content content">
+            {% block body_matter %}{% endblock %}
+        </section>
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- /.control-sidebar for ufmessages-->
+      {# Srinivas : Added Control Sidebar to show messages #}
+    {% if checkAuthenticated() %}
+      <aside class="rs-control-sidebar control-sidebar control-sidebar-light" style="">
+        <section class="ufmail">
+            {% include 'navigation/message-control-sidebar.html.twig'%}
+        </section>
+      </aside>
+      <!-- /.control-sidebar for ufmessages-->
+    {% endif %}
+
+    <!-- Footer -->
+    {% block footer %}
+        {% include "pages/partials/footer.html.twig" %}
+    {% endblock %}
+
+    </div>
+    <!-- ./wrapper -->
+
+{% endblock %}
+
+{% block scripts_page_group %}
+    {% if (params.custom_admin|default('N') == 'Y') %}
+        {{ assets.js('js/content/ufcustom_admin') | raw }}
+    {% else %}
+        {{ assets.js('js/admin') | raw }}
+    {% endif %}
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    {% if (params.hasstripe|default('N') == 'Y') %}
+        <script src="https://js.stripe.com/v3/" async defer></script>
+        <script>
+            var rs_spk = '{{regsevak.stripe_publish_key}}';
+        </script>
+    {% endif %}
+    {% if (params.hasgeocode|default('N') == 'Y') %}
+        <script id='google-geocodeinit' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG5Q9jpa20l8gKYweR7t1KstdsQbMNvnU&libraries=places&v=3"></script>
+        {{ assets.js('js/crud/geocode') | raw }}
+    {% endif %}
+    {# {{ assets.js('js/cmmission/util') | raw }} #}
+{% endblock %}

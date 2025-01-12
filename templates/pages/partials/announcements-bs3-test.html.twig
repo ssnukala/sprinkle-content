@@ -1,0 +1,174 @@
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <!-- ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol -->
+  <div class="carousel-inner">
+    <div class="item">
+      <div class="container">
+        <div class="carousel-caption">
+          <div class="bigText">
+            <p>A New Generation</p>
+            <p>A New Way of Advertising</p>
+            <p>It Begins Here</p>
+            <a class="btn btn-lg btn-primary" href="#" role="button">Launch Youniverse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item" >
+      <div class="container">
+        <div class="carousel-caption">
+          <div class="row">
+            <div class="bigText tripleBorder col-xs-6">
+              <p>YouTube</p>
+              <p>Influencer</p>
+              <p>Network</p>
+            </div>
+
+            <div class="mediumText col-xs-6">
+              <p>
+                Target a billion monthly users
+                <br> Our in-house YouTube Index 100,000 content creators
+                <br> In over 30 countries Organic new-age marketing Create brand advocates
+                <br> Interactive Advertising Systems
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="container">
+        <div class="carousel-caption">
+          <div class="row">
+            <div class="col-xs-6 text-left">
+              <h1>From Ideation to Creation</h1>
+              <p>We can create, distribute, educate. We can work with companies, agencies, YouTubers. We work with and alongside traditional marketing. We understand You- Tube, we understand the eco-system.</p>
+              <p>How do brands leverage the enormous power of You- Tube? By creating content that doesn’t feel like an ad, this is what we have been doing, let us do it for you! Find out what we do!</p>
+            </div>
+
+            <div class="bigText col-xs-6">
+              <p>Creation Distribution Education</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item active" >
+      <div class="container">
+        <div class="carousel-caption">
+          <blockquote>
+            <p>The times, they are a changin’</p>
+            <footer>Bob Dylan</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!-- /.carousel -->
+<style>
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+
+.carousel {
+  height: 200px;
+}
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+  z-index: 10;
+  position: relative;
+}
+/* Declare heights because of positioning of img element */
+
+.carousel .item {
+  height: 200px;
+  background-color: #777;
+}
+
+.carousel .item .carousel-caption .row > .bigText.tripleBorder {
+  border-right: 5px solid #f00;
+}
+
+.carousel .item .carousel-caption .row > .bigText.tripleBorder:before {
+  border-right: 5px solid #fff;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 17px;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel .item .carousel-caption .row > .bigText.tripleBorder:after {
+  border-right: 5px solid #aeaeae;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 6px;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel .item .carousel-caption .mediumText {
+  line-height: 1;
+  font-size: 35px !important;
+  text-align: left;
+  padding-top: 5px;
+}
+
+.carousel .item .carousel-caption .bigText {
+  line-height: 1;
+  font-size: 80px !important;
+  text-align: left;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel .item .carousel-caption .bigText p {
+  color: #ffffff;
+}
+
+.carousel .item .carousel-caption .bigText p:nth-of-type(1) {
+  margin-top: 10px;
+}
+
+.carousel .item .carousel-caption .bigText p:nth-of-type(2) {
+  color: #858585;
+}
+
+.carousel .item .carousel-caption .bigText p:nth-of-type(3) {
+  color: #f00;
+}
+
+.carousel .item .carousel-caption .bigText a.btn {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.carousel .item .carousel-caption blockquote {
+  border-left: none;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  margin-top: 8%;
+}
+
+.carousel .item .carousel-caption blockquote footer {
+  color: #f00;
+}
+</style>

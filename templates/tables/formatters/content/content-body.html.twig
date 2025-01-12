@@ -1,0 +1,29 @@
+{% import "forms/macros/crud-edit.html.twig" as crudEdit %}
+{% import "forms/macros/edit-pencil.html.twig" as pencil %}
+{% import "forms/macros/link-tags.html.twig" as gettag %}
+{% extends "formatters/dt_crud_formatter.html.twig" %}
+{% set forfield = 'body' %}
+
+{% block format_body %}
+    <div class='cm-note-contents cm-content-contents'>
+        <div class='rs-notes-door text-center bg-info' onClick='toggleViewHeight(this);' >
+            {{translate('CLICK_HERE_TO_EXPAND')}} <i class="fa notes_door_knob fa-arrow-circle-down"></i>
+        </div>
+        <div class='rs-notes-details rs-pageview-control' >
+            Type: {row.type} {{pencil.add2('contentpencil','type','/api/content/c/{row.id}/type')}} | 
+            Status: {row.status} {{pencil.add2('contentpencil','status','/api/content/c/{row.id}/status')}} | 
+            <span class="label label-info rs_notes ">{row.publish_date@dateDM}</span>        
+            <strong>{row.topic}</strong>
+            {row.body}
+            <span class="rs-conditional " data-forfield='row.home_work'>
+                <span class='rs-option' data-forfield='row.tags' data-value='notBlank'>
+                    Tags: {row.tags}
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class='text-center rs-neutral cr-editlink' style='margin:3px;'>
+        {{ crudEdit.generate(dtid,crudformdiv,'Update','genericDTCRUDSuccess') }}
+        {{pencil.add2('contentpencil','status','/api/content/c/{row.id}/status',{div_class:'cr-editlink ' ,showText:'<strong class="cm-contentstatus-link rs-notesstatus-link">Click here to Change Status</strong>', value:"{row.status}"}) }}
+    </div>
+{% endblock %}

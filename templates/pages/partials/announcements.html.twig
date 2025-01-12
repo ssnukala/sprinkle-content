@@ -1,0 +1,26 @@
+<div id="announcement_carousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    {% set tabactive = 'active'%}
+    {% for aid, announcement in params.announcements %}
+        <li data-target="#announcement_carousel" data-slide-to="{aid}" class="active"></li>
+        {% set tabactive = ''%}
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner">
+    {% for aid, announcement in params.announcements %}
+        {% set tabactive = 'active'%}
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="..." alt="First slide">
+        </div>
+        {% set tabactive = ''%}
+    {% endfor %}
+  </div>
+  <a class="carousel-control-prev" href="#announcement_carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#announcement_carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

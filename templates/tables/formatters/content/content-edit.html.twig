@@ -1,0 +1,25 @@
+{% extends "formatters/dt_crud_formatter.html.twig" %}
+{% set forfield = 'contentpencil' %}
+{% block format_body %}
+{% include "partials/ufform.html.twig" %}
+    <div class='rs-editfield' data-forfield='status'>
+        <div class="form-group">
+            <select class="form-control input-base-elem " name='status' >
+                <option value="U">Unpublished</option>
+                <option value="P">Published</option>
+                <option value="D">Deleted</option>
+                <option value="I">In Review</option>
+            </select>
+        </div>
+    </div>
+    <div class='rs-editfield' data-forfield='type'>
+        <div class="form-group">
+            <select class="form-control input-base-elem " name='type' >
+                <option value="GN">General</option>
+                <option value="AN">Announcement</option>
+                <option value="NW">News</option>
+                <option value="TP">Template</option>
+            </select>
+        </div>
+    </div>
+{% endblock %}

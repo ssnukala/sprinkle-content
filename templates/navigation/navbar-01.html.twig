@@ -1,0 +1,86 @@
+<!-- Logo -->
+{% set logopath = assets.url(site.logo|default('assets://regsevak/images/gurudev-100.jpg')) %}
+{% block navbar_logo %}
+<a href="{{site.uri.public}}" class="logo rs-logo hidden-xs">
+    <img class="rs-head-image img-rounded pull-left" src="{{assets.url(logopath)}}" alt="Gurudev">
+    <span class='rs-head-title'>{{site.title}}</span>
+</a>
+{% endblock %}
+
+<nav class="navbar navbar-static-top rs-navbar {{params.navbar_class}} ">
+    <div class='row rs-navbar-row'>
+        <div class='col-md-1 col-xs-1 rs-navbar-col0'>
+            <a href="{{site.uri.public}}" class="pull-left rs-logo-mobile visible-xs-block">
+                <img class="rs-head-image img-rounded " src="{{assets.url(logopath)}}" alt="Gurudev">
+            </a>
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle pull-left" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+        </div>
+        <div class='col-md-6 col-xs-6 rs-navbar-col1'>
+            <div class='rs-inside-nav'>
+                <!-- Main nav buttons -->
+                {% block navbar_search %}
+                {#}
+                    <div class="navbar-custom">
+                        {% include('pages/partials/search-bar.html.twig')%}
+                    </div>
+                    <!-- RegSEvak Navbar - RegSevak -->
+                #}  
+                    <div class="rs-navbar-custom">
+                        <h3 class='rs-gurukripa-text'>गुरुदेव तव महनीय कृपा । मेरे जीवन का अवलम्बन है । बस एक यही मेरा बल है ॥</h3>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+        <div class='col-md-5 col-xs-5 rs-navbar-col2'>
+            {% block dashboard_navbar %}
+                <div class="navbar-custom-menu rs-navbar-custom">
+                    <ul class="nav navbar-nav {{current_user.isMaster()? 'uf-user0' : 'uf-user9'}} ">
+                        <li class="hidden-xs rs-topmenu-site-title">
+                            <a href="#" >{{site.title}} - {{regsevak.year}}</a>
+                        </li>
+                    {% if checkAuthenticated() %}
+                        <li class="user user-menu">
+                            {% block userCard_nav %}
+                                <a href="#" class='rs-usercard-image'{#class="dropdown-toggle"  style='padding:5px;'#}>
+                                <img src="{{ current_user.avatar }}" class="user-image pull-left visible-xs-block" alt="User Image">
+                                <span class="hidden-xs">{{current_user.first_name}} {{current_user.last_name}}</span>
+                                {#}
+                                {% if current_user.isMaster() %}
+                                        <br><small class="rs-usercard-role hidden-xs">{{ translate("REGSEVAK_ROLE.MASTER.SHORT") }}</small>
+                                {% elseif current_user.isRegAdmin() %}
+                                        <br><small class="rs-usercard-role hidden-xs">{{ translate("REGSEVAK_ROLE.REG_ADMIN.SHORT") }}</small>
+                                {% elseif current_user.isTeacher() %}
+                                        <br><small class="rs-usercard-role hidden-xs">{{ translate("REGSEVAK_ROLE.TEACHER.SHORT") }}</small>
+                                {% endif %}
+                                #}
+                                </a>
+                            {% endblock %}
+                        </li>
+                        <li>
+                            <a href="{{site.uri.public}}/account/logout" class="nav-highlight">
+                            <span class="glyphicon glyphicon-log-out" title='{{translate("LOGOUT")}}' aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="control-sidebar">
+                                <i class="fas fa-at"></i>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{site.uri.public}}/account/sign-in" class="nav-highlight">
+                                <span class="glyphicon glyphicon-log-in" title='{{translate("LOGIN")}}' aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    </ul>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    <p class='rs-title-subscript visible-xs-block'>{{site.title}}</p>
+</nav>

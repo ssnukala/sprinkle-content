@@ -1,0 +1,66 @@
+{% set sliderclass = (announcements | length > 1) ? 'show' : 'hidden' %}
+<div class='card'>
+<div class='cm-bs3slider {{sliderclass}} header header-raised header-primary text-center'>
+    <!-- Carousel ================================================== -->
+    <div class="text-center dt-pulldown-header">
+        <span style="padding:3px 20px" class="label label-info">{{title}}</span>
+    </div>
+    <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    {#
+        {% if announcements | length > 1 %}
+            <ol class="carousel-indicators">
+                {% set tabactive = 'active'%}
+                {% for aid, announcement in announcements %}
+                    <li data-target="#announcement_carousel" data-slide-to="{{aid}}" class="active"></li>
+                    {% set tabactive = ''%}
+                {% endfor %}
+            </ol>
+        {% endif %}
+        #}
+        {% set tabactive = 'active'%}
+        {% set ctlscroll = (announcements | length > 1) ? 'scroll' : 'noscroll' %}
+
+        <div class="carousel-inner">
+            {% set tabactive = 'active'%}
+            {% for aid, announcement in announcements %}
+                <div class="item {{tabactive}}" ><div class="ann-container container {{ctlscroll}}">
+                    {#<div class="carousel-caption1">#}
+                        <div class='carousel-ann-head'>
+                            <h4>{{announcement.title}}
+                                <a class="pull-right" 
+                                onclick="jQuery('.carousel-ann-body').toggle(); return false;">
+                                <span class="label label-default"
+                                    style='text-decoration:underline;'>show / hide details</span></a>
+                            </h4>
+                        </div>
+                        <div class='carousel-ann-body'>
+                            {{announcement.body|raw}}
+                        </div>
+                    {#</div>#}
+                </div></div>
+                {% set tabactive = ''%}
+            {% endfor %}
+        </div>
+        {% if announcements | length > 1 %}
+            <a class="left ann-carcontrol {{ctlscroll}} carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right ann-carcontrol {{ctlscroll}} carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        {% endif %}
+    </div>
+</div>
+</div>
+{% macro slider_item() %}
+    <div class="item {{tabactive}}" ><div class="ann-container container {{ctlscroll}}">
+        <div class='carousel-ann-head'>
+            <h4>{{announcement.title}}
+                <a class="pull-right" 
+                onclick="jQuery('.carousel-ann-body').toggle(); return false;">
+                <span class="label label-default"
+                    style='text-decoration:underline;'>show / hide details</span></a>
+            </h4>
+        </div>
+        <div class='carousel-ann-body'>
+            {{announcement.body|raw}}
+        </div>
+    </div></div>
+{% endmacro %}

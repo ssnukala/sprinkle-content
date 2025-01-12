@@ -1,0 +1,669 @@
+{% extends "pages/landing/base/base.html.twig" %}
+{% block head_extra %}
+
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Chinmaya Mission Dallas Fort-Worth &raquo; Feed" href="https://cmdfw.org/feed/" />
+{% endblock %}
+
+    {% block stylesheets_page %}
+        {{ assets.css('css/regsevak/styles') | raw }}
+        {{ assets.css('css/crud/styles') | raw }}
+        {{ assets.css('css/cmmission/site01') | raw }}
+    {% endblock %}
+
+{% block body_attributes %}class="home blog wp-custom-logo header-layout-default"{% endblock %}
+{% block content %}
+    <div class="wrapper  default ">
+        <header class="header ">
+            <div style="display: none"></div>
+            <nav class="navbar navbar-default navbar-fixed-top  hestia_left navbar-not-transparent" style="display:block;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <div class="title-logo-wrapper">
+                            <a class="navbar-brand" href="https://cmdfw.org/" title="Chinmaya Mission Dallas Fort-Worth">
+                                <img src="https://cmdfw.org/wp-content/uploads/2020/04/cropped-CMDFW_LOGO_14.png" alt="Chinmaya Mission Dallas Fort-Worth"></a>
+                        </div>
+                        <div class="navbar-toggle-wrapper">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="sr-only">Toggle Navigation</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="main-navigation" class="collapse navbar-collapse">
+                        <ul id="menu-main" class="nav navbar-nav heista-nav">
+                            <li id="menu-item-2022" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-has-children menu-item-2022 dropdown">
+                                <a title="About" href="https://cmdfw.org/about/about-2/" class="dropdown-toggle">About <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-2023" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2023">
+                                        <a title="Chinmaya Mission D/FW" href="https://cmdfw.org/about/about-2/cmdfw/">Chinmaya Mission D/FW</a></li>
+                                    <li id="menu-item-2654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2654">
+                                        <a title="Saaket" href="/about/about-2/cmdfw#saaket">Saaket</a></li>
+                                    <li id="menu-item-2655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2655">
+                                        <a title="Chitrakoot" href="/about/about-2/cmdfw#chitrakoot">Chitrakoot</a></li>
+                                    <li id="menu-item-2024" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2024">
+                                        <a title="Masters" href="https://cmdfw.org/about/masters/">Masters</a></li>
+                                    <li id="menu-item-2021" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-has-children menu-item-2021 dropdown dropdown-submenu">
+                                        <a title="Our Team" href="https://cmdfw.org/about/our-acharyas/" class="dropdown-toggle">Our Team <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                        <ul role="menu" class="dropdown-menu">
+                                            <li id="menu-item-2016" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-has-children menu-item-2016 dropdown dropdown-submenu">
+                                                <a title="Swami Sarveshananda" href="https://cmdfw.org/about/our-acharyas/swami-sarveshananda/" class="dropdown-toggle">Swami Sarveshananda <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                                <ul role="menu" class="dropdown-menu">
+                                                    <li id="menu-item-2020" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2020">
+                                                        <a title="Have You Met . . .Brahmachari Uddhav Chaitanya" href="https://cmdfw.org/about/our-acharyas/have-you-met-brahmachari-uddhav-chaitanya/">Have You Met . . .Brahmachari Uddhav Chaitanya</a></li>
+                                                    <li id="menu-item-2019" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2019">
+                                                        <a title="Tanjore Painting by Swamiji Sarveshananda" href="https://cmdfw.org/about/our-acharyas/tanjore-painting-by-swamiji/">Tanjore Painting by Swamiji Sarveshananda</a></li>
+                                                </ul>
+                                            </li>
+                                            <li id="menu-item-2018" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2018">
+                                                <a title="Shri Prabhakar B. Ghate" href="https://cmdfw.org/about/our-acharyas/acharya-prabhakar-b-ghate/">Shri Prabhakar B. Ghate</a></li>
+                                            <li id="menu-item-2017" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2017">
+                                                <a title="Smt. Asha Ghate" href="https://cmdfw.org/about/our-acharyas/acharya-asha-ghate/">Smt. Asha Ghate</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-2015" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2015">
+                                        <a title="Get Involved!" href="https://cmdfw.org/about/get-involved/">Get Involved!</a></li>
+                                    <li id="menu-item-2026" class="menu-item menu-item-type-post_type menu-item-object-about menu-item-2026">
+                                        <a title="Chinmaya Mission Pledge" href="https://cmdfw.org/about/chinmaya-mission-pledge/">Chinmaya Mission Pledge</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-2036" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-has-children menu-item-2036 dropdown">
+                                <a title="Balavihar" href="https://cmdfw.org/balavihar/balavihar-at-cm-dfw/" class="dropdown-toggle">Balavihar <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-2038" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2038">
+                                        <a title="Balavihar Classes &#038; Activities" href="https://cmdfw.org/balavihar/balavihar-activities/">Balavihar Classes &#038; Activities</a></li>
+                                    <li id="menu-item-2039" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2039">
+                                        <a title="Balavihar Sessions: Locations and Timings" href="https://cmdfw.org/balavihar/balavihar-sessions-locations-and-timings/">Balavihar Sessions: Locations and Timings</a></li>
+                                    <li id="menu-item-2042" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2042">
+                                        <a title="What’s Up at Balavihar" href="https://cmdfw.org/balavihar/whats-up-at-balavihar/">What’s Up at Balavihar</a></li>
+                                    <li id="menu-item-2037" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2037">
+                                        <a title="Balazine" href="https://cmdfw.org/balavihar/balavihar-at-cm-dfw/balazine/">Balazine</a></li>
+                                    <li id="menu-item-2040" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2040">
+                                        <a title="Balavihar Teachers" href="https://cmdfw.org/balavihar/balavihar-teachers-2/">Balavihar Teachers</a></li>
+                                    <li id="menu-item-4119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4119">
+                                        <a title="Teachers Resources" href="https://www.dropbox.com/home/Teachers%20Resources">Teachers Resources</a></li>
+                                    <li id="menu-item-2041" class="menu-item menu-item-type-post_type menu-item-object-balavihar menu-item-2041">
+                                        <a title="Get Involved in Balavihar sub-committees" href="https://cmdfw.org/balavihar/get-involved-in-balavihar-sub-committees/">Get Involved in Balavihar sub-committees</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-2014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2014 dropdown">
+                                <a title="Resources" href="https://cmdfw.org/resources/resources/" class="dropdown-toggle">Resources <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-2030" class="menu-item menu-item-type-post_type menu-item-object-resources menu-item-2030">
+                                        <a title="Articles" href="https://cmdfw.org/resources/articles/">Articles</a></li>
+                                    <li id="menu-item-2046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2046">
+                                        <a title="Audio Resources" href="http://cmdfw.org/audio/">Audio Resources</a></li>
+                                    <li id="menu-item-2032" class="menu-item menu-item-type-post_type menu-item-object-resources menu-item-2032">
+                                        <a title="Bookstore" href="https://cmdfw.org/resources/bookstore/">Bookstore</a></li>
+                                    <li id="menu-item-2033" class="menu-item menu-item-type-post_type menu-item-object-resources menu-item-2033">
+                                        <a title="Downloads" href="https://cmdfw.org/resources/downloads/">Downloads</a></li>
+                                    <li id="menu-item-2034" class="menu-item menu-item-type-post_type menu-item-object-resources menu-item-2034">
+                                        <a title="Forms and Handbook" href="https://cmdfw.org/resources/forms-handbook/">Forms and Handbook</a></li>
+                                    <li id="menu-item-2575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2575">
+                                        <a title="Gallery" href="http://cmdfw.smugmug.com">Gallery</a></li>
+                                    <li id="menu-item-2035" class="menu-item menu-item-type-post_type menu-item-object-resources menu-item-2035">
+                                        <a title="Video Resources" href="https://cmdfw.org/resources/videos/">Video Resources</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-2043" class="menu-item menu-item-type-post_type menu-item-object-registration menu-item-has-children menu-item-2043 dropdown">
+                                <a title="Registration" href="https://cmdfw.org/registration/cmdfw-balavihar-registration/" class="dropdown-toggle">Registration <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595">
+                                        <a title="Balavihar@CMDFW" href="https://cmdfw.org/balaviharcmdfw/">Balavihar@CMDFW</a></li>
+                                    <li id="menu-item-4593" class="menu-item menu-item-type-post_type menu-item-object-registration menu-item-4593">
+                                        <a title="CMDFW eBalavihar" href="https://cmdfw.org/registration/cmdfw-ebalavihar/">CMDFW eBalavihar</a></li>
+                                    <li id="menu-item-2044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2044">
+                                        <a title="Login" href="https://www.z2systems.com/np/clients/cmdfw/login.jsp">Login</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-4389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4389 dropdown">
+                                <a title="Quick Links" href="#" class="dropdown-toggle">Quick Links <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-4392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4392">
+                                        <a title="Weekly Announcements" href="https://cmdfw.org/weekly-announcements111/">Weekly Announcements</a></li>
+                                    <li id="menu-item-4395" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4395">
+                                        <a title="Weekly Discourses" href="/audio/?cmdfwcall=Y&#038;dir=Weekly%20Discourses/">Weekly Discourses</a></li>
+                                    <li id="menu-item-4396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4396">
+                                        <a title="Download Student Folder" href="https://drive.google.com/file/d/15twJqrhtR2slED5Z328LAT10A91yGc9T/view?usp=sharing">Download Student Folder</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-2013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2013">
+                                <a title="Contact Us" href="https://cmdfw.org/contacts/">Contact Us</a></li>
+                            <li id="menu-item-2383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2383">
+                                <a title="Calendar" href="https://cmdfw.org/calendar/">Calendar</a></li>
+                            <li id="menu-item-4514" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4514 dropdown">
+                                <a title="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&#038;hosted_button_id=KPLYU7ZKXS9NQ&#038;source=url" class="dropdown-toggle">Donate <span class="caret-wrap"><span class="caret"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li id="menu-item-4516" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4516">
+                                        <a title="PayPal Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&#038;hosted_button_id=KPLYU7ZKXS9NQ&#038;source=url">PayPal Donate</a></li>
+                                    <li id="menu-item-4517" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4517">
+                                        <a title="Donate Stock" href="https://www.stockdonator.com/stock-information/?oid=cafa75">Donate Stock</a></li>
+                                </ul>
+                            </li>
+                            <li class="hestia-search-in-menu">
+                                <div class="hestia-nav-search">
+                                    <form role="search" method="get" class="search-form" action="https://cmdfw.org/">
+                                        <label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+                                        <input type="submit" class="search-submit" value="Search" />
+                                    </form>
+                                </div>
+                                <a class="hestia-toggle-search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="carousel-hestia-generic" class="carousel slide" data-ride="carousel" >
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <div class="page-header" style="min-height: 607.5px;">
+
+                            <div class="container" style="padding-top: 120px;">
+                                <div class="row hestia-big-title-content">
+                                    <div class="
+		 big-title-slider-content text-center col-sm-8 col-sm-offset-2 		">
+                                        <h1 class="hestia-title">Slick Material Design</h1>
+                                        <span class="sub-title">Beautiful, Elegantly Coded, One-Page WordPress Theme for Business</span>
+                                        <div class="buttons">
+                                            <a href="#" title="See more" class="btn btn-primary">See more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.container -->
+                            <div class="header-filter" style="background-image: url({{assets.url('assets://cmdfwmsc/images/msc2022/gurudev-sitting-01.jpg')}});"></div>
+                            <!-- /.header-filter -->
+                        </div>
+                        <!-- /.page-header -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="primary" class="boxed-layout-header page-header header-small" data-parallax="active" style='display:none;' >
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <div class="page-header" style="min-height: 607.5px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1 text-center">
+                                        <h1 class="hestia-title">To Give Maximum Happiness To Maximum People For Maximum Time</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-filter" style="background-image: url(http://cmdfw.org/wp-content/uploads/2020/04/19238095_10156163056887814_5103667205978105299_o.jpg);"></div>
+        </div>
+        <div class="main  main-raised ">
+    <section class="hestia-features " id="features" data-sorder="hestia_features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 hestia-features-title-area">
+                    <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here.</h5>
+                </div>
+            </div>
+            <div class="hestia-features-content">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 feature-box">
+                        <div class="hestia-info">
+                            <div class="icon" style="color:#de4b39">
+                                <i class="fa fa-th"></i>
+                            </div>
+                            <h4 class="info-title">Responsive</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 feature-box">
+                        <div class="hestia-info">
+                            <div class="icon" style="color:#55acef">
+                                <i class="fa fa-reorder"></i>
+                            </div>
+                            <h4 class="info-title">Quality</h4>
+                            <p>Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 feature-box">
+                        <div class="hestia-info">
+                            <div class="icon" style="color:#ea4c89">
+                                <i class="fa fa-support"></i>
+                            </div>
+                            <h4 class="info-title">Support</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hestia-blogs " id="blog" data-sorder="hestia_blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center hestia-blogs-title-area">
+                    <h2 class="hestia-title">Blog</h2>
+                    <h5 class="description">Check out our latest news</h5>
+                </div>
+            </div>
+            <div class="hestia-blog-content">
+                <div class="row">
+                    <article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+                        <div class="card card-plain card-blog">
+                            <div class="card-image">
+                                <a href="https://demo.themeisle.com/hestia/2016/10/03/built-successful-castle-ever/" title="Perfectly on furniture">
+                                    <img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-PaFqeqlc/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/card-blog4.jpg" width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-PaFqeqlc/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/card-blog4.jpg"
+                                        class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-PaFqeqlc/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/card-blog4.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" /></noscript>                                    </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="category"><a href="https://demo.themeisle.com/hestia/category/appearance/" title="View all posts in Appearance" rel="tag">Appearance</a> </h6>
+                                <h4 class="card-title entry-title">
+                                    <a class="blog-item-title-link" href="https://demo.themeisle.com/hestia/2016/10/03/built-successful-castle-ever/" title="Perfectly on furniture" rel="bookmark">
+								Perfectly on furniture							</a>
+                                </h4>
+                                <p class="card-description">Feet evil to hold long he open knew an no. Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare. In stimulated my everything it literature. Greatly explain attempt
+                                    <a
+                                        class="moretag" href="https://demo.themeisle.com/hestia/2016/10/03/built-successful-castle-ever/"> Read more…</a>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+                        <div class="card card-plain card-blog">
+                            <div class="card-image">
+                                <a href="https://demo.themeisle.com/hestia/2016/10/03/autodesk-looks-future-3d-printing-project-escher/" title="Fat son how smiling natural">
+                                    <img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-aEADUgkf/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog5.jpg" width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-aEADUgkf/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog5.jpg"
+                                        class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-aEADUgkf/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog5.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" /></noscript>                                    </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="category"><a href="https://demo.themeisle.com/hestia/category/appearance/" title="View all posts in Appearance" rel="tag">Appearance</a> </h6>
+                                <h4 class="card-title entry-title">
+                                    <a class="blog-item-title-link" href="https://demo.themeisle.com/hestia/2016/10/03/autodesk-looks-future-3d-printing-project-escher/" title="Fat son how smiling natural" rel="bookmark">
+								Fat son how smiling natural							</a>
+                                </h4>
+                                <p class="card-description">To shewing another demands sentiments. Marianne property cheerful informed at striking at. Clothes parlors however by cottage on. In views it or meant drift to. Be concern parlors settled or do shyness address.&nbsp; He
+                                    always<a class="moretag" href="https://demo.themeisle.com/hestia/2016/10/03/autodesk-looks-future-3d-printing-project-escher/"> Read more…</a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+                        <div class="card card-plain card-blog">
+                            <div class="card-image">
+                                <a href="https://demo.themeisle.com/hestia/2016/10/03/6-insights-french-fashion-landscape/" title="Admiration prosperous now">
+                                    <img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-_XrVLWqW/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog3-1.jpg" width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-_XrVLWqW/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog3-1.jpg"
+                                        class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="360" height="240" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-_XrVLWqW/w:360/h:240/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog3-1.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" loading="lazy" /></noscript>                                    </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="category"><a href="https://demo.themeisle.com/hestia/category/appearance/" title="View all posts in Appearance" rel="tag">Appearance</a> </h6>
+                                <h4 class="card-title entry-title">
+                                    <a class="blog-item-title-link" href="https://demo.themeisle.com/hestia/2016/10/03/6-insights-french-fashion-landscape/" title="Admiration prosperous now" rel="bookmark">
+								Admiration prosperous now							</a>
+                                </h4>
+                                <p class="card-description">Extremity direction existence as dashwoods do up. Securing marianne led welcomed offended but offering six raptures. Conveying do newspaper rapturous oh at. Two indeed suffer saw beyond far former mrs remain. Occasional
+                                    continuing possession we<a class="moretag" href="https://demo.themeisle.com/hestia/2016/10/03/6-insights-french-fashion-landscape/"> Read more…</a></p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- /.row -->
+                <div class="row"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hestia-team " id="team" data-sorder="hestia_team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center hestia-team-title-area">
+                    <h2 class="hestia-title">Meet our team</h2>
+                    <h5 class="description">Prove that you have real people working for you, with some nice looking profile pictures and links to social media.</h5>
+                </div>
+            </div>
+            <div class="hestia-team-content">
+                <div class="row">
+                    <div class="col-xs-12 col-ms-6 col-sm-6">
+                        <div class="card card-profile card-plain">
+                            <div class="col-md-5">
+                                <div class="card-image"><img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-bA-c9sQk/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/1.jpg" class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-bA-c9sQk/w:201/h:201/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/1.jpg"
+                                        alt=" Alec Thompson" title=" Alec Thompson" data-opt-lazy-loaded="true"><noscript><img class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-bA-c9sQk/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/1.jpg"  alt=" Alec Thompson"  title=" Alec Thompson" /></noscript></div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="content">
+                                    <h4 class="card-title"> Alec Thompson</h4>
+                                    <h6 class="category text-muted">FOUNDER</h6>
+                                    <p class="card-description">Don't be scared of the truth because we need to restart the human foundation in truth...</p>
+                                    <div class="footer"><a href="#/linkedin.com" class="btn btn-just-icon btn-simple"><i class="fa fa-linkedin"></i></a><a href="#/twitter.com" class="btn btn-just-icon btn-simple"><i class="fa fa-twitter"></i></a>
+                                        <a href="#/google.com" class="btn btn-just-icon btn-simple"><i class="fa fa-google-plus"></i></a><a href="#/facebook.com" class="btn btn-just-icon btn-simple"><i class="fa fa-facebook-f"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-ms-6 col-sm-6">
+                        <div class="card card-profile card-plain">
+                            <div class="col-md-5">
+                                <div class="card-image"><img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-f_hrBgp3/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/2.jpg" class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-f_hrBgp3/w:201/h:201/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/2.jpg"
+                                        alt="Kendall Andrew" title="Kendall Andrew" data-opt-lazy-loaded="true"><noscript><img class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-f_hrBgp3/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/2.jpg"  alt="Kendall Andrew"  title="Kendall Andrew" /></noscript></div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="content">
+                                    <h4 class="card-title">Kendall Andrew</h4>
+                                    <h6 class="category text-muted">GRAPHIC DESIGNER</h6>
+                                    <p class="card-description">Don't be scared of the truth because we need to restart the human foundation in truth...</p>
+                                    <div class="footer"><a href="#/linkedin.com" class="btn btn-just-icon btn-simple"><i class="fa fa-linkedin"></i></a><a href="#/facebook.com" class="btn btn-just-icon btn-simple"><i class="fa fa-facebook"></i></a><a href="#/twitter.com"
+                                            class="btn btn-just-icon btn-simple"><i class="fa fa-twitter"></i></a><a href="#/dribbble.com" class="btn btn-just-icon btn-simple"><i class="fa fa-dribbble"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-ms-6 col-sm-6">
+                        <div class="card card-profile card-plain">
+                            <div class="col-md-5">
+                                <div class="card-image"><img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-80SIpHlf/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/3.jpg" class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-80SIpHlf/w:201/h:201/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/3.jpg"
+                                        alt="George West" title="George West" data-opt-lazy-loaded="true"><noscript><img class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-80SIpHlf/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/3.jpg"  alt="George West"  title="George West" /></noscript></div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="content">
+                                    <h4 class="card-title">George West</h4>
+                                    <h6 class="category text-muted">BACKEND HACKER</h6>
+                                    <p class="card-description">Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever known.</p>
+                                    <div class="footer"><a href="#/facebook.com" class="btn btn-just-icon btn-simple"><i class="fa fa-facebook-f"></i></a><a href="#/twitter.com" class="btn btn-just-icon btn-simple"><i class="fa fa-twitter"></i></a><a href="#/github.com"
+                                            class="btn btn-just-icon btn-simple"><i class="fa fa-github"></i></a><a href="#/google.com" class="btn btn-just-icon btn-simple"><i class="fa fa-google-plus"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-ms-6 col-sm-6">
+                        <div class="card card-profile card-plain">
+                            <div class="col-md-5">
+                                <div class="card-image"><img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-pin1ztyS/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/4.jpg" class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-pin1ztyS/w:201/h:201/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/4.jpg"
+                                        alt="Gina Andrew" title="Gina Andrew" data-opt-lazy-loaded="true"><noscript><img class="img" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-pin1ztyS/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/themes/hestia/assets/img/4.jpg"  alt="Gina Andrew"  title="Gina Andrew" /></noscript></div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="content">
+                                    <h4 class="card-title">Gina Andrew</h4>
+                                    <h6 class="category text-muted">WEB DESIGNER</h6>
+                                    <p class="card-description">Princess Leia Organa was one of the Rebel Alliance’s greatest leaders, fearless on the battlefield and dedicated to ending the tyranny of the Empire.</p>
+                                    <div class="footer"><a href="#/pinterest.com" class="btn btn-just-icon btn-simple"><i class="fa fa-pinterest-p"></i></a><a href="#/twitter.com" class="btn btn-just-icon btn-simple"><i class="fa fa-twitter"></i></a><a href="#/dribbble.com"
+                                            class="btn btn-just-icon btn-simple"><i class="fa fa-dribbble"></i></a><a href="#/behance.com" class="btn btn-just-icon btn-simple"><i class="fa fa-behance"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>            
+     <section class="hestia-subscribe subscribe-line subscribe-line-image" id="subscribe" data-sorder="hestia_subscribe" style="background-image: url(https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-MsqrOEoq/w:auto/h:auto/q:90/https://s20206.pcdn.co/hestia/wp-content/uploads/sites/89/2017/01/buildings_comp.jpg);">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2 text-center hestia-subscribe-title-area">
+                    <h2 class="title">Subscribe to our Newsletter</h2>
+                    <h5 class="subscribe-description">Receive updates instantly</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="card card-raised card-form-horizontal">
+                        <div class="content">
+                            <div class="row">
+                                <div class="textwidget">
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                            <div class="form-group is-empty"><input type="email" class="sib-email-area form-control" name="email" required="required" placeholder="Your Email Here"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="submit" class="btn btn-primary btn-block sib-default-btn" name="submit" value="Subscribe">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="hestia-contact contactus section-image" id="contact" data-sorder="hestia_contact" style="background-image: url(https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-ylvq-JFG/w:auto/h:auto/q:90/https://s20206.pcdn.co/wp-content/themes/hestia/assets/img/contact.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 hestia-contact-title-area">
+                    <h2 class="hestia-title">Get in Touch</h2>
+                    <h5 class="description">You need more information? Check what other persons are saying about our product. They are very happy with their purchase.</h5>
+                    <div class="hestia-description">
+                        <div class="hestia-info info-horizontal">
+                            <div class="icon icon-primary"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="description">
+                                <h4 class="info-title" style="font-size: 18px">Find us at the office</h4>
+                                <p style="color: #ccc">Bld Mihail Kogalniceanu, nr. 8, 7652 Bucharest, Romania
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="hestia-info info-horizontal">
+                            <div class="icon icon-primary"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="description">
+                                <h4 class="info-title" style="font-size: 18px">Give us a ring</h4>
+                                <p style="color: #ccc">Michael Jordan +40 762 321 762 Mon - Fri, 8:00-22:00</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-2 hestia-contact-form-col">
+                    <div class="card card-contact">
+                        <div class="header header-raised header-primary text-center">
+                            <h4 class="card-title">Contact Us</h4>
+                        </div>
+                        <div class="content">
+                            <div class="wpforms-container wpforms-container-full" id="wpforms-4120">
+                                <form id="wpforms-form-4120" class="wpforms-validate wpforms-form form-group" data-formid="4120" method="post" enctype="multipart/form-data" action="/hestia/" novalidate="novalidate">
+                                    <div class="wpforms-field-container">
+                                        <div id="wpforms-4120-field_0-container" class="wpforms-field wpforms-field-name wpforms-one-half wpforms-first form-group" data-field-id="0"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_0">Name <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-4120-field_0" class="wpforms-field-large wpforms-field-required form-control"
+                                                name="wpforms[fields][0]" placeholder="Your Name" required=""></div>
+                                        <div id="wpforms-4120-field_3-container" class="wpforms-field wpforms-field-email wpforms-one-half form-group" data-field-id="3"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_3">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-4120-field_3" class="wpforms-field-large wpforms-field-required form-control"
+                                                name="wpforms[fields][3]" placeholder="Your Email" required=""></div>
+                                        <div id="wpforms-4120-field_4-container" class="wpforms-field wpforms-field-text form-group" data-field-id="4"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_4">Subject</label><input type="text" id="wpforms-4120-field_4" class="wpforms-field-large form-control" name="wpforms[fields][4]" placeholder="Subject"></div>
+                                        <div
+                                            id="wpforms-4120-field_2-container" class="wpforms-field wpforms-field-textarea form-group" data-field-id="2"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_2">Message <span class="wpforms-required-label">*</span></label><textarea id="wpforms-4120-field_2" class="wpforms-field-medium wpforms-field-required form-control"
+                                                name="wpforms[fields][2]" placeholder="Your Message" required=""></textarea></div>
+                            </div>
+                            <div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="4120"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="25"><button type="submit" name="wpforms[submit]" class="wpforms-submit "
+                                    id="wpforms-submit-4120" value="wpforms-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Send message">Send message</button></div>
+                            </form>
+                        </div>
+                        <!-- .wpforms-container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer footer-black footer-big">
+        <div class="container">
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="text-2" class="widget widget_text">
+                            <h5>About us</h5>
+                            <div class="textwidget">
+                                <p>Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed although do blessing he juvenile in. </p>
+                                <p>Society excited forbade. Here name off yet she long sold easy. Differed oh cheerful procured pleasure securing suitable. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="text-6" class="widget widget_text">
+                            <h5>Social Media Feed</h5>
+                            <div class="textwidget">
+                                <ul class="fetched_tweets light">
+                                    <li class="tweets_avatar">
+                                        <div class="tweet_wrap">
+                                            <div class="wdtf-user-card ltr">
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="tweet_data">
+                                                What's New in Hestia - Our Flagship Product <a href="https://t.co/LsLFRTypzx" target="_blank" rel="nofollow noopener">https://t.co/LsLFRTypzx</a>
+                                            </div>
+                                            <br>
+                                            <div class="clear"></div>
+                                            <div class="times">
+                                                <em>
+
+                <a href="https://twitter.com/themeisle" target="_blank" title="Follow ThemeIsle on Twitter [Opens new window]" rel="noopener">4 days</a>
+            </em>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li class="tweets_avatar">
+                                        <div class="tweet_wrap">
+                                            <div class="wdtf-user-card ltr">
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="tweet_data facebook">
+                                                Our Hestia Facebook Group has reached 1423 members &amp; counting <a href="https://www.facebook.com/groups/2024469201114053" target="_blank" rel="nofollow noopener">https://www.facebook.com/groups/2024469201114053</a>
+                                            </div>
+                                            <br>
+                                            <div class="clear"></div>
+                                            <div class="times">
+                                                <em>
+
+                <a href="https://twitter.com/themeisle" target="_blank" title="Follow ThemeIsle on Twitter [Opens new window]" rel="noopener">6 days</a>
+            </em>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li class="tweets_avatar">
+                                        <div class="tweet_wrap">
+                                            <div class="wdtf-user-card ltr">
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="tweet_data">
+                                                Check out <a href="https://www.creative-tim.com/product/material-kit" target="_blank" rel="nofollow noopener">Material Kit</a> by Creative Tim! <a href="https://www.creative-tim.com" target="_blank" rel="nofollow noopener">https://www.creative-tim.com</a>
+                                            </div>
+                                            <br>
+                                            <div class="clear"></div>
+                                            <div class="times">
+                                                <em>
+
+                <a href="https://twitter.com/themeisle" target="_blank" title="Follow ThemeIsle on Twitter [Opens new window]" rel="noopener">7 days</a>
+            </em>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="media_gallery-2" class="widget widget_media_gallery">
+                            <h5>Instagram Feed</h5>
+                            <style type="text/css">
+                                #gallery-1 {
+                                    margin: auto;
+                                }
+                                
+                                #gallery-1 .gallery-item {
+                                    float: left;
+                                    margin-top: 10px;
+                                    text-align: center;
+                                    width: 25%;
+                                }
+                                
+                                #gallery-1 img {
+                                    border: 2px solid #cfcfcf;
+                                }
+                                
+                                #gallery-1 .gallery-caption {
+                                    margin-left: 0;
+                                }
+                                /* see gallery_shortcode() in wp-includes/media.php */
+                            </style>
+                            <div id="gallery-1" class="gallery galleryid-25 gallery-columns-4 gallery-size-thumbnail">
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon portrait">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-Wu-Gm1VF/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog1.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-Wu-Gm1VF/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog1.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-Wu-Gm1VF/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/blog1.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-ERadwy-D/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/bg5.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-ERadwy-D/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/bg5.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-ERadwy-D/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/bg5.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-vg_4WdN5/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1456051580611-e193e8fb2cc9-a.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-vg_4WdN5/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1456051580611-e193e8fb2cc9-a.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-vg_4WdN5/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1456051580611-e193e8fb2cc9-a.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-mY6vPWEl/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1439846583999-b988afee1b0a-.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-mY6vPWEl/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1439846583999-b988afee1b0a-.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-mY6vPWEl/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/photo-1439846583999-b988afee1b0a-.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl><br style="clear: both">
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RzKTpwM0/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1453057961357-5554bca12b05.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RzKTpwM0/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1453057961357-5554bca12b05.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RzKTpwM0/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1453057961357-5554bca12b05.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RVdLLDLY/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456072212651-c507cb43b26f.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RVdLLDLY/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456072212651-c507cb43b26f.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-RVdLLDLY/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456072212651-c507cb43b26f.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs--WnO761w/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1446155822036-0a91268cde82.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs--WnO761w/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1446155822036-0a91268cde82.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs--WnO761w/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1446155822036-0a91268cde82.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl>
+                                <dl class="gallery-item">
+                                    <dt class="gallery-icon landscape">
+				<img data-opt-src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-i8e-iaz6/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456348898220-eb3c574fd338.jpg" width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-i8e-iaz6/w:75/h:75/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456348898220-eb3c574fd338.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" data-opt-lazy-loaded="true"><noscript><img width="150" height="150" src="https://mllj2j8xvfl0.i.optimole.com/YyZCPVs-i8e-iaz6/w:150/h:150/q:90/rt:fill/g:ce/https://s20206.pcdn.co/wp-content/uploads/sites/89/2016/10/r-photo-1456348898220-eb3c574fd338.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" /></noscript>
+			</dt></dl><br style="clear: both">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="hestia-bottom-footer-content">
+                <ul id="menu-footer-menu" class="footer-menu pull-left">
+                    <li id="menu-item-3932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-25 current_page_item menu-item-3932"><a href="https://demo.themeisle.com/hestia/" aria-current="page">Home</a></li>
+                    <li id="menu-item-3934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3934"><a href="https://demo.themeisle.com/hestia/shop/">Shop</a></li>
+                    <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://demo.themeisle.com/hestia/blog/">Blog</a></li>
+                    <li id="menu-item-3933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3933"><a href="https://demo.themeisle.com/hestia/contact-us/">Contact</a></li>
+                </ul>
+                <div class="copyright pull-right">
+                    Hestia | Developed by <a href="https://themeisle.com" rel="nofollow">ThemeIsle</a> </div>
+            </div>
+        </div>
+    </footer>
+
+        </div>
+    </div>
+
+    <button class="hestia-scroll-to-top">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="12.5px" height="20px"><path d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg>
+    </button>
+{% endblock %}     
+{% block scripts_page %}
+        {{ assets.js('js/cmmission/hestia') | raw }}
+{% endblock %}
+
+
