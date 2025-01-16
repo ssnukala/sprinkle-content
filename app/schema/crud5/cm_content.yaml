@@ -1,0 +1,21 @@
+model: cm_content
+label: Content Management
+description: Manage User Content
+table:
+  id: table-content
+  css-class: crud5-table
+  schema: groups
+  macrofile: macros/content-body.twig
+  columns:
+    body:
+      name: body
+      label: CONTENT.C.BODY
+      sortable:  true
+      searchable: true
+      template: contentdesc
+      visible: true
+    actions:
+      label: "ACTIONS"
+      template: actions
+      filter: false
+      sortable: false

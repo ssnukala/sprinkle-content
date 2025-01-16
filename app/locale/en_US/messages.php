@@ -12,12 +12,6 @@
  * @author Alexander Weissman
  */
 
-use UserFrosting\Sprinkle\CRUD\Controller\CRUDUtilityController as CRUDUtil;
-
-$lModels = [
-    'cm_content' => 'Content'
-];
-
 $languageArr = [];
 //$languageArr = CRUDUtil::getUSLanguageArr($lModels);
 $languageArr["CONTENT"] = [
@@ -67,6 +61,6 @@ $languageArr["CONTENT"] = [
     ]
 ];
 $languageArr['PASSWORD']['CHANGE'] = 'I want to Change my Password';
-$languageArr['CLICK_HERE_TO_EXPAND']='Click here to expand';
+$languageArr['CLICK_HERE_TO_EXPAND'] = 'Click here to expand';
 
 return $languageArr;

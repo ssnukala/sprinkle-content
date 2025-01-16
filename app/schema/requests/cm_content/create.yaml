@@ -1,9 +1,3 @@
-id:
-  form:
-    type: hidden
-    id: name
-    label: "ID"
-    placeholder: "ID"
 type:
   validators:
     member_of:
@@ -48,14 +42,22 @@ publish_date:
       label: "&CONTENT.C.PUBLISH_DATE"
       message: VALIDATE.REQUIRED
   form:
-    class: datepicker
+    type: text
+    id: publish_date
+    placeholder: "&CONTENT.C.PUBLISH_DATE"
+    label: "CONTENT.C.PUBLISH_DATE"
+    class: "datepicker form-control"
 archive_date:
   validators:
     required:
       label: "&CONTENT.C.ARCHIVE_DATE"
       message: VALIDATE.REQUIRED
   form:
-    class: datepicker
+    type: text
+    id: archive_date
+    placeholder: "CONTENT.C.ARCHIVE_DATE"
+    label: "CONTENT.C.ARCHIVE_DATE"
+    class: "datepicker form-control"
 title:
   validators:
     length:
@@ -67,6 +69,10 @@ title:
       message: VALIDATE.REQUIRED
   transformations:
     - trim
+  form:
+    type: text
+    id: title
+    label: "CONTENT.C.TITLE"
 slug:
   validators:
     length:
@@ -91,7 +97,8 @@ body:
     id: body
     label: "CONTENT.C.BODY"
     newline: Y
-    class: rs-ckeditor5
+    class: "form-control rs-ckeditor5"
+    rows: 5
 tags:
   transformations:
     - trim
@@ -99,6 +106,7 @@ tags:
     type: textarea
     id: tags
     label: "CONTENT.C.TAGS"
+    rows: 2
 meta:
   validators:
     check_json:
@@ -111,6 +119,7 @@ meta:
     label: "CONTENT.C.META"
     data-type: "json"
     class: "check_json form-control"
+    rows: 2
 user_id:
   form:
     type: hidden

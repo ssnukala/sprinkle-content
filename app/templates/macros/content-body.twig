@@ -1,0 +1,35 @@
+{% macro customFormat(type,name,model) %}
+{% import "macros/util/edit-pencil.html.twig" as pencil %}
+{% import "macros/util/crud-edit.html.twig" as crudEdit %}
+    {% if type == 'contentdesc' %}
+        {% verbatim %}
+    <script id="crudlist-table-column-{% endverbatim %}{{name}}{% verbatim %}" type="text/x-handlebars-template">
+        <td >
+            <div class='cm-note-contents cm-content-contents'>
+                <div class='rs-notes-door text-center bg-info' onClick='toggleViewHeight(this);' >
+                    {% endverbatim %} {{translate('CLICK_HERE_TO_EXPAND')}} {% verbatim %}<i class="fa notes_door_knob fa-arrow-circle-down"></i>
+                </div>
+                <div class='rs-notes-details rs-pageview-control' >
+                    Type: {{row.type}} {% endverbatim %}{{pencil.add2('contentpencil','type','/api/content/c/{row.id}/type')}} {% verbatim %} | 
+                    Status: {{row.status}} {% endverbatim %}{{pencil.add2('contentpencil','status','/api/content/c/{row.id}/status')}} {% verbatim %}| 
+                    <span class="label label-info rs_notes ">{{row.publish_date}}</span>        
+                    <strong>{{row.topic}}</strong>
+                    {{row.body}}
+                    <span class="rs-conditional " data-forfield='row.home_work'>
+                        <span class='rs-option' data-forfield='row.tags' data-value='notBlank'>
+                            Tags: {{row.tags}}
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class='text-center rs-neutral cr-editlink' style='margin:3px;'>
+                {% endverbatim %}{{ crudEdit.generate(dtid,crudformdiv,'Update','genericDTCRUDSuccess') }}
+                {{pencil.add2('contentpencil','status','/api/content/c/{{row.id}}/status',{div_class:'cr-editlink ' ,showText:'<strong class="cm-contentstatus-link rs-notesstatus-link">Click here to Change Status</strong>', value:"{{row.status}}"}) }}
+                {% verbatim %}
+            </div>
+        </td>
+    </script>
+        {% endverbatim %}
+    {% endif %}
+
+{% endmacro %}

@@ -1,0 +1,127 @@
+type:
+  validators:
+    member_of:
+      values:
+        - "GN"
+        - "AN"
+        - "NW"
+        - "TP"
+    required:
+      message: VALIDATE.REQUIRED
+  form:
+    type: select
+    label: CONTENT.C.TYPE
+    options:
+      "": --Select--
+      "GN": General
+      "AN": Announcement
+      "NW": News
+      "TP": Template
+status:
+  validators:
+    member_of:
+      values:
+        - "U"
+        - "P"
+        - "D"
+        - "I"
+    required:
+      message: VALIDATE.REQUIRED
+  form:
+    type: select
+    label: CONTENT.C.TYPE
+    options:
+      "": --Select--
+      "U": Unpublished
+      "P": Published
+      "D": Deleted
+      "I": In Review
+publish_date:
+  validators:
+    required:
+      label: "CONTENT.C.PUBLISH_DATE"
+      message: VALIDATE.REQUIRED
+  form:
+    type: text
+    id: publish_date
+    placeholder: "CONTENT.C.PUBLISH_DATE"
+    label: "CONTENT.C.PUBLISH_DATE"
+    class: "datepicker form-control"
+archive_date:
+  validators:
+    required:
+      label: "&CONTENT.C.ARCHIVE_DATE"
+      message: VALIDATE.REQUIRED
+  form:
+    type: text
+    id: archive_date
+    placeholder: "CONTENT.C.ARCHIVE_DATE"
+    label: "CONTENT.C.ARCHIVE_DATE"
+    class: "datepicker form-control"
+title:
+  validators:
+    length:
+      label: "&CONTENT.C.TITLE"
+      min: 1
+      max: 255
+      message: VALIDATE.LENGTH_RANGE
+    required:
+      message: VALIDATE.REQUIRED
+  transformations:
+    - trim
+  form:
+    type: text
+    id: title
+    label: "CONTENT.C.TITLE"
+slug:
+  validators:
+    length:
+      label: "&CONTENT.C.SLUG"
+      min: 1
+      max: 50
+      message: VALIDATE.LENGTH_RANGE
+    required:
+      message: VALIDATE.REQUIRED
+  transformations:
+    - trim
+  form:
+    newline: Y
+body:
+  validators:
+    required:
+      message: VALIDATE.REQUIRED
+  transformations:
+    - trim
+  form:
+    type: textarea
+    id: body
+    label: "CONTENT.C.BODY"
+    newline: Y
+    class: "form-control rs-ckeditor5"
+    rows: 5
+tags:
+  transformations:
+    - trim
+  form:
+    type: textarea
+    id: tags
+    label: "CONTENT.C.TAGS"
+    newline: Y
+    rows: 2
+meta:
+  validators:
+    check_json:
+      message: CRUD.INVALID_JSON
+  transformations:
+    - trim
+  form:
+    type: textarea
+    id: meta
+    label: "CONTENT.C.META"
+    data-type: "json"
+    class: "check_json form-control"
+    rows: 2
+    newline: Y
+user_id:
+  form:
+    type: hidden

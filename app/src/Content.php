@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * UserFrosting Content Sprinkle (http://www.userfrosting.com)
  *
@@ -16,14 +18,23 @@ use UserFrosting\Sprinkle\Admin\Admin;
 use UserFrosting\Sprinkle\Core\Core;
 use UserFrosting\Sprinkle\Account\Event\UserRedirectedAfterLoginEvent;
 use UserFrosting\Sprinkle\Admin\Listener\UserRedirectedToDashboard;
-use UserFrosting\Sprinkle\SprinkleRecipe;
 use UserFrosting\Sprinkle\CRUD5\CRUD5;
+use UserFrosting\Sprinkle\Content\Database\Migrations\v500\ContentTable;
+use UserFrosting\Sprinkle\BakeryRecipe;
+use UserFrosting\Sprinkle\Core\Sprinkle\Recipe\MigrationRecipe;
+use UserFrosting\Sprinkle\Core\Sprinkle\Recipe\SeedRecipe;
+use UserFrosting\Sprinkle\Core\Sprinkle\Recipe\TwigExtensionRecipe;
+use UserFrosting\Sprinkle\SprinkleRecipe;
 
 use UserFrosting\Theme\AdminLTE\AdminLTE;
 
+
 class Content implements
     SprinkleRecipe,
-    EventListenerRecipe
+    MigrationRecipe,
+    EventListenerRecipe,
+    TwigExtensionRecipe,
+    BakeryRecipe
 {
     /**
      * {@inheritdoc}
@@ -76,10 +87,29 @@ class Content implements
      */
     public function getEventListeners(): array
     {
+        return [];
+    }
+
+    public function getMigrations(): array
+    {
         return [
-            UserRedirectedAfterLoginEvent::class => [
-                UserRedirectedToDashboard::class,
-            ],
+            // v500
+            ContentTable::class,
         ];
+    }
+    /**
+     * {@inheritDoc}
+     */
+    public function getTwigExtensions(): array
+    {
+        return [];
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBakeryCommands(): array
+    {
+        return [];
     }
 }

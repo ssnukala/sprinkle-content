@@ -7,11 +7,12 @@
  * @copyright Copyright (c) 2013-2016 Srinivas Nukala
  */
 
-namespace UserFrosting\Sprinkle\Content\Database\Migrations\v430;
+namespace UserFrosting\Sprinkle\Content\Database\Migrations\v500;
+
 
 use UserFrosting\Sprinkle\Core\Database\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use UserFrosting\Sprinkle\CRUD5\Controller\CRUDUtilityController as CRUDUtil;
+use UserFrosting\Sprinkle\CRUD5\Controller\Utility\CRUDUtilityController as CRUDUtil;
 
 /**
  * Content table migration
@@ -28,7 +29,7 @@ class ContentTable extends Migration
     /**
      * {@inheritDoc}
      */
-    public function up()
+    public function up(): void
     {
         if (!$this->schema->hasTable('cm_content')) {
             $this->schema->create('cm_content', function (Blueprint $table) {
@@ -66,7 +67,7 @@ class ContentTable extends Migration
     /**
      * {@inheritDoc}
      */
-    public function down()
+    public function down(): void
     {
         if ($this->schema->hasTable('cm_content')) {
             $this->schema->drop('cm_content');
