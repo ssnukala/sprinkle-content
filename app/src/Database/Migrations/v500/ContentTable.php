@@ -54,14 +54,15 @@ class ContentTable extends Migration
                 $table->charset = 'utf8';
             });
         }
-        /**
+        /* *
          * Add premissions for this table
-         */
+         * /
         if ($this->schema->hasTable('permissions')) {
             // Skip this if table is not empty
             $adminroles = ['group-admin', 'site-admin',];
             CRUDUtil::createCRUDPermissions('cm_content', $adminroles);
         }
+            */
     }
 
     /**
@@ -72,6 +73,6 @@ class ContentTable extends Migration
         if ($this->schema->hasTable('cm_content')) {
             $this->schema->drop('cm_content');
         }
-        CRUDUtil::deleteCRUDPermissions('cm_content');
+        //CRUDUtil::deleteCRUDPermissions('cm_content');
     }
 }

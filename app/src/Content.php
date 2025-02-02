@@ -33,8 +33,8 @@ class Content implements
     SprinkleRecipe,
     MigrationRecipe,
     EventListenerRecipe,
-    TwigExtensionRecipe,
-    BakeryRecipe
+    TwigExtensionRecipe
+//BakeryRecipe
 {
     /**
      * {@inheritdoc}
