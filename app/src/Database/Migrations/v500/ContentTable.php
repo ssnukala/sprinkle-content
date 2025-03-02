@@ -50,8 +50,8 @@ class ContentTable extends Migration
                 $table->timestamps();
                 $table->softDeletes();
                 $table->engine = 'InnoDB';
-                $table->collation = 'utf8_unicode_ci';
-                $table->charset = 'utf8';
+                $table->collation = 'utf8mb4_unicode_ci';
+                $table->charset = 'utf8mb4';
             });
         }
         /* *
